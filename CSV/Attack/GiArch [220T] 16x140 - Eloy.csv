@@ -1,0 +1,86 @@
+NOTE  |»  Author : Eloy v1.0 - 220T.
+NOTE  |    ---------------------------------------------------------
+NOTE  |»  Note: Set Drop Line Fix Outer Corner.
+NOTE  |    ---------------------------------------------------------
+NOTE  |»  Attack: GiArch, From The Corner.
+NOTE  |    ---------------------------------------------------------
+NOTE  |»  Make Troops: 16 Giant + 140 Archer.
+NOTE  |    ---------------------------------------------------------
+NOTE  |»  Drops Giant, Archer, All Heroes, CC.
+NOTE  |    ---------------------------------------------------------
+
+      |----------------------------------------- GiArch START ----------------------------------------|
+
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|
+SIDE  |1          |1          |           |           |           |           |           |RANDOM     |
+
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|MAKE FIRST WAVE VECTORS
+MAKE  |A          |FRONT-RIGHT|14         |20         |INT-EXT    |2          |2          |           |
+MAKE  |B          |RIGHT-FRONT|14         |20         |INT-EXT    |2          |2          |           |
+MAKE  |C          |LEFT-BACK  |14         |20         |INT-EXT    |2          |2          |           |
+MAKE  |D          |BACK-LEFT  |14         |20         |INT-EXT    |2          |2          |           |
+MAKE  |E          |FRONT-LEFT |14         |20         |EXT-INT    |2          |2          |           |
+MAKE  |F          |RIGHT-BACK |14         |20         |EXT-INT    |2          |2          |           |
+MAKE  |G          |LEFT-FRONT |14         |20         |EXT-INT    |2          |2          |           |
+MAKE  |H          |BACK-RIGHT |14         |20         |EXT-INT    |2          |2          |           |
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________| 
+DROP  |E-G        |3-5        |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |E-G        |9-11       |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |A-C        |2-4        |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |A-C        |7-9        |1          |giant      |0          |120-220    |1300-1600  |           |Drop 1giant
+DROP  |E-G        |2-14       |18         |arch       |0          |90-120     |0          |           |Drop Archers
+DROP  |A-C        |1-13       |17         |arch       |0          |90-120     |150-300    |           |Drop Archers
+
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|MAKE VECTORS TO DROP KINK, QUEEN and CASTLE
+MAKE  |Q          |FRONT-RIGHT|15         |2          |INT-EXT    |2          |2          |           |
+MAKE  |R          |BACK-RIGHT |15         |1          |INT-EXT    |2          |2          |           |Main Side to Drop Queen, King, CC And The WD
+MAKE  |I          |FRONT-RIGHT|10         |1          |EXT-INT    |3          |3          |           |
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |Q          |1          |1          |castle     |0          |0          |100-170    |           |Drop Castle
+DROP  |Q          |2          |1          |queen      |0          |0          |90-150     |           |Drop Queen
+DROP  |Q          |3          |1          |warden     |0          |0          |0          |           |Drop Grand Warden
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |F-H        |3-5        |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |F-H        |9-11       |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |B-D        |2-4        |1          |giant      |0          |120-220    |180-300    |           |Drop 1giant
+DROP  |B-D        |7-9        |1          |giant      |0          |120-220    |1300-1600  |           |Drop 1giant
+DROP  |F-H        |2-14       |18         |arch       |0          |90-120     |0          |           |Drop Archers
+DROP  |B-D        |1-13       |18         |arch       |0          |90-120     |100-170    |           |Drop Archers
+
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|
+DROP  |R          |2          |1          |king       |0          |0          |60-90      |           |Drop king
+
+
+RECALC|           |           |           |           |           |           |           |           |recalculate remaining troops and then Drop...
+WAIT  |60-90      |           |           |           |           |           |           |           |Add a wait time; during wait time also CHECK exit values
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|
+MAKE  |A          |FRONT-RIGHT|12         |20         |INT-EXT    |1          |1          |           |
+MAKE  |B          |RIGHT-FRONT|12         |20         |INT-EXT    |1          |1          |           |
+MAKE  |C          |LEFT-BACK  |12         |20         |INT-EXT    |1          |1          |           |
+MAKE  |D          |BACK-LEFT  |12         |20         |INT-EXT    |1          |1          |           |
+MAKE  |E          |FRONT-LEFT |12         |20         |EXT-INT    |1          |1          |           |
+MAKE  |F          |RIGHT-BACK |12         |20         |EXT-INT    |1          |1          |           |
+MAKE  |G          |LEFT-FRONT |12         |20         |EXT-INT    |1          |1          |           |
+MAKE  |H          |BACK-RIGHT |12         |20         |EXT-INT    |1          |1          |           |
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________| 
+DROP  |E-G        |4          |1          |giant      |0          |0          |100        |           |Drop 1giant
+DROP  |E-G        |10         |1          |giant      |0          |0          |100        |           |Drop 1giant
+DROP  |A-C        |2          |1          |giant      |0          |0          |100        |           |Drop 1giant
+DROP  |A-C        |8          |1          |giant      |0          |0          |300        |           |Drop 1giant
+DROP  |E-G        |3-12       |10         |arch       |0          |50         |0          |           |Drop Archers
+DROP  |A-C        |1-10       |10         |arch       |0          |50         |0          |           |Drop Archers
+DROP  |E-G        |3-12       |10         |arch       |0          |50         |0          |           |Drop Archers
+DROP  |A-C        |1-10       |10         |arch       |0          |50         |0          |           |Drop Archers
+
+      |                                                                                   |
+      |------------------------------------- GiArch END ----------------------------------|
